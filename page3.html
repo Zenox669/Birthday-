@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"UTF-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
+  <title>Thanks</title>
+  <style>
+    body {
+      margin: 0;
+      background: pink;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .thanks {
+      font-size: 2em;
+      animation: fadeText 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeText {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .creator {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <div class=\"thanks\">Thanks for wasting your valuable time 😂</div>
+  <div class=\"creator\">Created by [Your Name]</div>
+</body>
+</html>
