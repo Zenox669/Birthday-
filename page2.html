@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Wish</title>
+  <style>
+    body {
+      margin: 0;
+      background: pink;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .gift {
+      width: 150px;
+      margin-top: 50px;
+      cursor: pointer;
+      animation: wiggle 1.5s infinite;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0); }
+      25% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+    }
+
+    .wish-box {
+      display: none;
+      margin: 30px auto;
+      background: white;
+      color: hotpink;
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 1.3em;
+      max-width: 600px;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 2px solid hotpink;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: white;
+      color: hotpink;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click the Gift Box, Shorna! 🎁</h1>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" class="gift" onclick="showWish()">
+
+  <div id="wish" class="wish-box"></div>
+
+  <script>
+    function showWish() {
+      var wish = document.getElementById(\"wish\");
+      wish.style.display = \"block\";
+      var text = \"Happy Birthday, Shorna! You are the reason I smile every day. You light up my world and I’m so grateful for you. I love you so much! 💖\";
+      let i = 0;
+      wish.textContent = \"\";
+      function typeWriter() {
+        if (i < text.length) {
+          wish.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+      typeWriter();
+    }
+  </script>
+
+  <a href=\"page3.html\" class=\"btn\">Next</a>
+</body>
+</html>
